@@ -8,7 +8,7 @@
     "start": "node server.js"
   },
   "author": "tú:M_a (renewalter2013@gmail.com)",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.14.0",
     "socket.io": "^1.4.8"
@@ -17,5 +17,16 @@
     "node": "6.3.1",
     "npm": "3.10.5"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tummac/start-node.git"
+  },
+  "keywords": [
+    "example"
+  ],
+  "bugs": {
+    "url": "https://github.com/tummac/start-node/issues"
+  },
+  "homepage": "https://github.com/tummac/start-node#readme"
 }
