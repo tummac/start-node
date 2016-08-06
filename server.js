@@ -1,19 +1,22 @@
 'use strict'
 
 const
-  express     = require( 'express' ),
-  path        = require( 'path' ),
-  routes      = require( './routes' ),
+  express = require( 'express' ),
+  path    = require( 'path' ),
+  routes  = require( './routes' ),
+  app     = express(),
+  server  = require( 'http' ).Server( app ),
+  io      = require( 'socket.io' )( server )
   // MongoClient = require( 'mongodb' ).MongoClient,
-  app         = express(),
-  server      = require( 'http' ).Server( app ),
-  io          = require( 'socket.io' )( server )
 // app ---------- ++
 app.set( 'port', ( process.env.PORT || 3000 ) )
+
+// app.use( express.static( __dirname + '/public' ) )
 app.use( '/static', express.static(  __dirname + '/public/static' ) )
 app.use( '/media', express.static( __dirname + '/public/media' ) )
 
 // Routes
+
 app.use( '/', routes )
 
 // socket.io ---------------- >>
@@ -50,4 +53,6 @@ io.on( 'connection', ( socket ) => {
 //   } )
 // } )
 
-server.listen( 3000, () => console.log( 'The servidor running in port 3000!' ) )
+server.listen( app.get( 'port' ), () => {
+  console.log( 'The servidor running in port: ', app.get( 'port' ) )
+} )

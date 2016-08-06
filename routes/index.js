@@ -1,6 +1,7 @@
 'use strict'
 
 const
+  cool     = require('cool-ascii-faces'),
   express  = require( 'express' ),
   path     = require( 'path' ),
   router   = express.Router(),
@@ -19,5 +20,9 @@ router.get( '/', ( req, res ) => {
 router.get( '/about', ( req, res ) => {
   res.sendFile( path.join( BASE_DIR, 'templates', 'about.html' ) )
 } )
+
+router.get('/cool', function( req, res) {
+  res.send( cool() )
+})
 
 module.exports = router
