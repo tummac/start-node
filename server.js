@@ -9,6 +9,7 @@ const
   server      = require( 'http' ).Server( app ),
   io          = require( 'socket.io' )( server )
 // app ---------- ++
+app.set( 'port', ( process.env.PORT || 3000 ) )
 app.use( '/static', express.static(  __dirname + '/public/static' ) )
 app.use( '/media', express.static( __dirname + '/public/media' ) )
 
