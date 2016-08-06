@@ -1,0 +1,21 @@
+{
+  "name": "start-node",
+  "version": "1.0.0",
+  "description": "start programing with nodeJs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "tú:M_a (renewalter2013@gmail.com)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    // "mongodb": "^2.2.5",
+    "socket.io": "^1.4.8"
+  },
+  "engines": {
+    "node": "6.3.0"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,81 @@
+*
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+body
+{
+  background: rgba(0, 0, 0, .4);
+}
+button
+{
+  background: hsl(225, 90%, 55%);
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  width: 20%;
+}
+button:hover
+{
+  background: hsl(0, 90%, 55%);
+}
+button:active
+{
+  background: hsl(225, 90%, 55%);
+}
+h1
+{
+
+  height: 50px;
+}
+button, input
+{
+  border: 0 solid transparent;
+  padding: 10px 5px;
+  margin: 0 1px;
+}
+input
+{
+ 
+  width: 80%;
+}
+input[name=user]
+{
+  border-radius: 5px 0 0 5px;
+  width: 40%;
+}
+#box-chat
+{
+  position: relative;
+  width: 30%;
+}
+#content
+{
+  width: 70%;
+}
+#form-chat
+{
+  background: hsl(100, 45%, 55%);
+  bottom: 0;
+  display: flex;
+  left: 0;
+  padding: 5px 3px;
+  position: absolute;
+  width: 100%;
+}
+#message
+{
+  background: hsl(100, 45%, 55%);
+  border-bottom: 2px solid white;
+  height: calc(100vh - 95px );
+  list-style: none;
+  overflow-x: auto;
+  width: 100%;
+}
+#wrapper
+{
+  display: flex;
+  height: calc(100vh - 50px);
+  width: 100%;
+}
