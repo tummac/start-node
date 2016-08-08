@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  <link rel="stylesheet" href="/static/css/estilo.css" />
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/static/js/chat.js"></script>
+{% endblock extrahead %}
+
+{% block body %}
+  <div id="content"></div>
+  <div id="box-chat">
+    <ul id="message"></ul>
+    <form action="" id="form-chat">
+      <input type="text" name="user" autocomplete="off" placeholder="Mi Nombre es"  />
+      <input type="text" name="msg" autocomplete="off" placeholder="Escribir el mensaje" />
+      <button>Send</button>
+    </form>
+  </div>
+{% endblock body %}

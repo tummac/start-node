@@ -1,7 +1,6 @@
 'use strict'
 
 const
-  cool     = require('cool-ascii-faces'),
   express  = require( 'express' ),
   path     = require( 'path' ),
   router   = express.Router(),
@@ -14,15 +13,18 @@ router.use( ( req, res, next ) => {
 } )
 
 router.get( '/', ( req, res ) => {
-  res.sendFile( path.join( BASE_DIR, 'templates', 'index.html' ) )
+  // res.sendFile( path.join( BASE_DIR, 'templates', 'index.html' ) )
+  res.render( 'index', { title: 'Inicio' } )
+} )
+
+router.get( '/chat', ( req, res ) => {
+  res.render( 'chat', { title: 'Chat real time'})
 } )
 
 router.get( '/about', ( req, res ) => {
-  res.sendFile( path.join( BASE_DIR, 'templates', 'about.html' ) )
+  // res.sendFile( path.join( BASE_DIR, 'templates', 'about.html' ) )
+  res.render( 'about', { title: 'About' } )
 } )
 
-router.get('/cool', function( req, res) {
-  res.send( cool() )
-})
 
 module.exports = router

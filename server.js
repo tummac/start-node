@@ -1,13 +1,21 @@
 'use strict'
 
 const
-  express = require( 'express' ),
-  path    = require( 'path' ),
-  routes  = require( './routes' ),
-  app     = express(),
-  server  = require( 'http' ).Server( app ),
-  io      = require( 'socket.io' )( server )
+  express  = require( 'express' ),
+  nunjucks = require( 'express-nunjucks' ),
+  path     = require( 'path' ),
+  routes   = require( './routes' ),
+  app      = express(),
+  server   = require( 'http' ).Server( app ),
+  io       = require( 'socket.io' )( server )
   // MongoClient = require( 'mongodb' ).MongoClient,
+// config engine template
+app.set( 'view engine', 'html' )
+app.set( 'views', __dirname + '/public/templates' )
+nunjucks.setup( {
+  throwOnUndefined: true,
+  watch: true,
+}, app )
 // app ---------- ++
 app.set( 'port', ( process.env.PORT || 3000 ) )
 

@@ -1,27 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <title>Inicio</title>
+{% extends "base.html" %}
 
-  <link rel="stylesheet" href="../static/css/estilo.css" />
-
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="/static/js/jquery-3.1.0.js"></script>
-  <script src="/static/js/main.js"></script>
-</head>
-<body>
-  <h1>Hello túM_a nodeJS!!</h1>
-  <section id="wrapper">
-    <div id="content"></div>
-    <div id="box-chat">
-      <ul id="message"></ul>
-      <form action="" id="form-chat">
-        <input type="text" name="user" autocomplete="off" placeholder="Mi Nombre es"  />
-        <input type="text" name="msg" autocomplete="off" placeholder="Escribir el mensaje" />
-        <button>Send</button>
-      </form>
-    </div>
-  </section>
-</body>
-</html>
+{% block body %}
+  <div>welcome</div>
+{% endblock body %}

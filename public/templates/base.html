@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ title }}</title>
+  
+  <script src="/static/js/jquery-3.1.0.js"></script>
+  {% block extrahead %}{% endblock extrahead %}
+</head>
+<body>
+  <header>
+    <h1>Mi página web-</h1>
+    {% block header %}{% endblock header %}
+  </header>
+  <section id="wrapper">
+    {% block body %}{% endblock body %}
+  </section>
+  <footer>
+    All Right reserverd -2016-
+    {% block footer %}{% endblock footer %}
+  </footer>
+</body>
+</html>
